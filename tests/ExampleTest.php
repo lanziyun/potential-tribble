@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Lanziyun\PotentialTribble\Tests;
 
 use PHPUnit\Framework\TestCase;
 
