@@ -2,8 +2,8 @@
 
 namespace Lanziyun\PotentialTribble;
 
-use Illuminate\Support\ServiceProvider;
 use GuzzleHttp\Client;
+use Illuminate\Support\ServiceProvider;
 
 class TranslateServiceProvider extends ServiceProvider
 {
