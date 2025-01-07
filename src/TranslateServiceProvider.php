@@ -13,7 +13,7 @@ class TranslateServiceProvider extends ServiceProvider
         $this->app->singleton(TranslateService::class, function ($app) {
             return new TranslateService(
                 new Client(),
-                config('translate.base_url')
+                config('translation.base_url')
             );
         });
     }

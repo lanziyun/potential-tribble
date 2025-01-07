@@ -23,7 +23,7 @@ class TranslateService
                     'source' => 8,
                     'word' => $originalName,
                     'originCode' => $originLang,
-                    'translatedCode' => $targetLang,
+                    'translatedCode' => $targetLang ?? config('translation.default_target_lang'),
                 ],
             ]);
 
