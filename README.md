@@ -19,6 +19,14 @@ And execute the vendor:publish command, assets will be copied to the specified l
 php artisan vendor:publish --provider="Lanziyun\PotentialTribble\TranslateServiceProvider"
 ```
 
+providers.php add
+```bash
+return [
+    ...
+    Lanziyun\PotentialTribble\TranslateServiceProvider::class
+];
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
