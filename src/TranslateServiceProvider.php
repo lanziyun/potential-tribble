@@ -9,6 +9,7 @@ class TranslateServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../config/translation.php', 'translation');
         $this->app->singleton(TranslateService::class, function ($app) {
             return new TranslateService(
                 new Client(),
@@ -20,7 +21,7 @@ class TranslateServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/translate.php' => config_path('translate.php'),
+            __DIR__ . '/../config/translation.php' => config_path('translation.php'),
         ]);
     }
 }
