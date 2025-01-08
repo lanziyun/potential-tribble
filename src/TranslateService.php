@@ -15,7 +15,7 @@ class TranslateService
         $this->baseUrl = $baseUrl;
     }
 
-    public function getTranslation(string $originalName, string $originLang, string $targetLang): array
+    public function getTranslation(string $originalName, string $originLang, string $targetLang = 'zh-TW'): array
     {
         try {
             $response = $this->client->get("{$this->baseUrl}/api/v1/translate", [
@@ -23,7 +23,7 @@ class TranslateService
                     'source' => 8,
                     'word' => $originalName,
                     'originCode' => $originLang,
-                    'translatedCode' => $targetLang ?? config('translation.default_target_lang'),
+                    'translatedCode' => $targetLang,
                 ],
             ]);
 
